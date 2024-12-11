@@ -27,6 +27,8 @@ public class Day03_02 {
 
 		System.out.println("평균 : " + df.format(avg) + "점");
 
+
+		
 	}
 
 }
