@@ -1,7 +1,7 @@
 package day02;
 
 public class Day02_05 {
-
+	/**this method is start method*/
 	public static void main(String[] args) {
 		// 형변환
 
