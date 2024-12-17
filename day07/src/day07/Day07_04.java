@@ -3,7 +3,7 @@ package day07;
 public class Day07_04 {
 
 	public static void main(String[] args) {
-		// for문 실습
+		// for문 실습1
 
 		int sum = 0;
 
