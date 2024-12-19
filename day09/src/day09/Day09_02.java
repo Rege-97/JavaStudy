@@ -37,9 +37,7 @@ public class Day09_02 {
 			if (user == 4) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
-			}
-
-			if (user == 1) {
+			} else if (user == 1) {
 				user_s = "가위";
 			} else if (user == 2) {
 				user_s = "바위";
@@ -84,6 +82,29 @@ public class Day09_02 {
 					System.out.println("비겼습니다.");
 				}
 			}
+
+//			switch (user - com) {
+//			case 2:
+//			case -1:
+//				System.out.println("컴퓨터 승!");
+//				break;
+//			case 1:
+//			case -2:
+//				System.out.println("사용자 승!");
+//				break;
+//			case 0:
+//				System.out.println("비겼음!");
+//				break;
+//			}
+
+//			if (user == com) {
+//				System.out.println("비겼음!");
+//			} else if ((user + 1) % 3 == com % 3) {
+//				System.out.println("컴퓨터 승!");
+//			} else {
+//				System.out.println("사용자 승!");
+//			}
+
 			System.out.println();
 		}
 	}
