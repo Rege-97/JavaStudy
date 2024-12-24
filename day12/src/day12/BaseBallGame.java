@@ -34,7 +34,8 @@ public class BaseBallGame {
 		System.out.println("====================================================");
 		System.out.println();
 
-		int user[] = new int[3];
+		// 입력을 받을 user 배열을 4의 크기로 만들어 0, 1, 2는 입력받고 3은 엔터를 사용하여 초과 입력 확인용으로 사용
+		int user[] = new int[4];
 		int num_count = 0;
 		int s_count = 0;
 		int b_count = 0;
@@ -47,25 +48,26 @@ public class BaseBallGame {
 			System.out.print(i + "회차 입력 : ");
 
 			// user 배열에 입력(공백 구분 위해 skip 1)
-			for (int j = 0; j <= 2; j++) {
+			for (int j = 0; j <= 3; j++) {
 				user[j] = System.in.read() - 48;
 				System.in.skip(1);
 
 			}
-
+			
 			// 입력값 검사
 
 			// 숫자가 아닌 문자를 잘못 입력했을 시 i를 1 감소시켜 해당 회차 다시 진행
+			// 만약 4번째 입력값이 -38(엔터값인 10에 -48을 한 값)이 아니면 무언가 입력된 것이므로 회차 다시 진행
 			for (int j = 0; j <= 2; j++) {
-				if (user[j] > 9 || user[j] < 1) {
-					System.out.println("잘못 입력했습니다.");
+				if (user[j] > 9 || user[j] < 1 || user[3] != -38) {
+					System.out.println("잘못 입력했습니다. 다시 입력하세요!");
 					System.out.println();
 					bool = false;
 					break;
 				}
 			}
 			if (bool == false) {
-				System.in.skip(2);
+				System.in.skip(100); // 스킵을 많이 하여 잘못된 값을 버퍼에서 충분히 제거(버퍼 전부 제거를 아직 안배움)
 				i--;
 				bool = true;
 				continue;
@@ -83,7 +85,7 @@ public class BaseBallGame {
 					}
 				}
 				if (num_count >= 1) {
-					System.out.println("중복된 숫자를 입력하면 안돼요~");
+					System.out.println("중복된 숫자를 입력하면 안돼요~ 다시 입력하세요!");
 					System.out.println();
 					System.in.skip(2);
 					i--;
