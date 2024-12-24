@@ -53,7 +53,7 @@ public class BaseBallGame {
 				System.in.skip(1);
 
 			}
-			
+
 			// 입력값 검사
 
 			// 숫자가 아닌 문자를 잘못 입력했을 시 i를 1 감소시켜 해당 회차 다시 진행
@@ -67,7 +67,7 @@ public class BaseBallGame {
 				}
 			}
 			if (bool == false) {
-				System.in.skip(100); // 스킵을 많이 하여 잘못된 값을 버퍼에서 충분히 제거(버퍼 전부 제거를 아직 안배움)
+				System.in.skip(2048); // 버퍼 초기화
 				i--;
 				bool = true;
 				continue;
