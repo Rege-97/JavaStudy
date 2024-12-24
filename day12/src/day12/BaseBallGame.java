@@ -33,7 +33,7 @@ public class BaseBallGame {
 		System.out.println("                   (ex : 1 2 3)");
 		System.out.println("====================================================");
 		System.out.println();
-		System.out.println(Arrays.toString(com));
+
 		int user[] = new int[3];
 		int num_count = 0;
 		int s_count = 0;
