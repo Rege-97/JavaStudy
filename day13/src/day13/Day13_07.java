@@ -33,7 +33,7 @@ public class Day13_07 {
 		System.out.print("연산자(+,-,*,/) : ");
 		int user = System.in.read();
 
-		int result = aaa(num1, num2, user);
+		int result = aaa(num1, num2, user); 
 
 		System.out.println(num1+" "+((char)user)+" "+num2+ " = " + result);
 
