@@ -35,6 +35,9 @@ public class BankTest {
 		b1.getInfo();
 		b2.getInfo();
 		b3.getInfo();
+		
+		b2.setMoney(500);
+		b2.getInfo();
 	}
 
 }

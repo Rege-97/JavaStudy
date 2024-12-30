@@ -4,7 +4,7 @@ public class Bank {
 
 	String name;
 	String acount;
-	int money;
+	private int money;
 	static double iyul = 0.07;
 
 	public Bank() {
@@ -12,6 +12,16 @@ public class Bank {
 		acount = "0000-0000-000";
 		money = 50000;
 //		iyul = 0.07;
+	}
+
+	// setter - 반환타입 x 매개변수 o
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	// getter - 반환타입 o 매개변수 x
+	public int getMoney() {
+		return this.money;
 	}
 
 	public void inMoney(int inmoney) {
