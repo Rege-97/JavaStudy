@@ -32,20 +32,23 @@ public class InheriTest {
 		Super sp = new Sub();
 		System.out.println("sp.a = " + sp.a);
 		System.out.println("sp.b = " + sp.b);
-		
-		sp.test1();
-		
-		Super arr[]=new Super[3];
-		arr[0]=new Sub();
-		arr[1]=new Super();
-		arr[2]=new Sub();
-		
-		for(int i =0;i<arr.length;i++) {
-			arr[i].test1();
 
-		}
-		
-		
+		sp.test1();
+
+		Sub sb = (Sub) sp;
+		System.out.println("sb.c = " + sb.c);
+		sb.test2();
+
+//		Super arr[]=new Super[3];
+//		arr[0]=new Sub();
+//		arr[1]=new Super();
+//		arr[2]=new Sub();
+//		
+//		for(int i =0;i<arr.length;i++) {
+//			arr[i].test1();
+//
+//		}
+
 //		System.out.println("sp.c = " + sp.c);
 
 //		Sub sb2 = new Sub();
