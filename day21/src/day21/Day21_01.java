@@ -19,7 +19,7 @@ public class Day21_01 {
 			}
 		}
 		System.out.println(ch + "는 총 " + count + "개 입니다.");
-
+		
 	}
 
 }
