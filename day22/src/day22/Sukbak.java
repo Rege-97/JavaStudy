@@ -74,28 +74,30 @@ public class Sukbak {
 			
 			// 키값 뽑을 준비
 			Iterator<String> keys = map.keySet().iterator();
-			String arr1[] = new String[map.size()];
+			int arr1[] = new int[map.size()];
 			String arr2[] = new String[map.size()];
 			int i = 0;
 			
 			// 키값을 arr1, 밸류 값을 arr2에 저장
 			while (keys.hasNext()) {
 				String key = keys.next();
-				arr1[i] = key;
+				arr1[i] = Integer.parseInt(key);
 				arr2[i] = map.get(key);
 				i++;
 			}
-			String temp1 = "";
+			int temp1 = 0;
 			String temp2 = "";
 
-			// 인티저로 arr1을 파싱하여 선택정렬로 arr1과 arr2를 정렬
+			// 선택정렬로 arr1과 arr2를 정렬
 			for (int j = 0; j < arr1.length; j++) {
 				for (int k = j + 1; k < arr1.length; k++) {
-					if (Integer.parseInt(arr1[j]) > Integer.parseInt(arr1[k])) {
+					if (arr1[j] > arr1[k]) {
 						temp1 = arr1[j];
 						temp2 = arr2[j];
+						
 						arr1[j] = arr1[k];
 						arr2[j] = arr2[k];
+						
 						arr1[k] = temp1;
 						arr2[k] = temp2;
 					}
