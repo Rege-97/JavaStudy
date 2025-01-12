@@ -128,7 +128,7 @@ public class Sukbak {
 	}
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+
 		
 		// 방번호(key)와 빈방여부(value)를 담을 해쉬맵 생성
 		HashMap<String, String> map = new HashMap<String, String>();
@@ -137,27 +137,35 @@ public class Sukbak {
 
 		// 무한 반복을 위해 while 사용
 		while (true) {
+		
 			
 			//메뉴 출력 및 입력 메서드 실행
+			try {
+			Scanner sc = new Scanner(System.in);
 			int user_m = menu(sc);
+			if (user_m == 4) {
+				break;
+			}
 			
 			// 실행 메서드에서 입력값에 대한 예외를 처리하기 위해 try~catch문 사용
-			try {
+			
 				user_m = run(sc, map, user_m);
 			} catch (NullPointerException e) {	
 				System.out.println("방 번호를 잘못 입력했습니다.");
 				System.out.println("메뉴로 돌아갑니다.");
+				
 			} catch (InputMismatchException e) {
 				System.out.println("메뉴는 숫자만 입력이 가능합니다.");
 				System.out.println("다시 입력해주세요.");
+
 			} catch (Exception e) {
 				System.out.println("알 수 없는 오류 발생");
 				System.out.println("고객센터 문의 바람");
+				continue;
 			}
 			// 실행 메서드에서 반환된 입력값이 4면 while문 종료
-			if (user_m == 4) {
-				break;
-			}
+
+			
 
 		}
 	}
