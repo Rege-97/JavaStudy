@@ -33,6 +33,8 @@ as (select * from emp where 1=0)
 
 desc emp4
 
+select * from student
+
 select * from emp4
 
 alter table emp3 
@@ -96,3 +98,18 @@ delete from emp4
 where deptno=(select deptno 
                 from dept 
                 where dname='SALES') 
+                
+update student set addr='경기' where age = 30
+
+delete from student where name='김채현' 
+
+insert into student values('김채현',29,'인천','032-0000-0000')
+
+update student set addr = '경기' where addr='인천' 
+ 
+
+select * from student
+
+commit 
+
+rollback

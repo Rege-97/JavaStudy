@@ -12,11 +12,15 @@ public class jdbcTest3 {
 		String pwd = "1234";
 
 		Connection conn = DriverManager.getConnection(url, user, pwd);
-
-		Statement st = conn.createStatement();
-
-		String sql = "select * from student";
-		ResultSet rs = st.executeQuery(sql);
+//
+//		Statement st = conn.createStatement();
+//
+//		String sql = "select * from student";
+//		ResultSet rs = st.executeQuery(sql);
+		
+		String sql="select * from student";
+		PreparedStatement ps= conn.prepareStatement(sql);
+		ResultSet rs=ps.executeQuery();
 
 		while (rs.next()) {
 			String name = rs.getString("name");
@@ -28,6 +32,7 @@ public class jdbcTest3 {
 		}
 		
 		rs.close();
+		ps.close();
 
 		conn.close();
 	}
