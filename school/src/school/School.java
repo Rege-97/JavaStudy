@@ -209,7 +209,9 @@ public class School {
 		System.out.println();
 		System.out.println(count + "건의 정보가 등록되었습니다.");
 
-		sql = "select * from student where sname=? order by snum";
+		sql = "select * from student "
+				+ "where sname=? "
+				+ "order by snum";
 
 		PreparedStatement ps2 = conn.prepareStatement(sql);
 		ps2.setString(1, sname);
@@ -235,7 +237,10 @@ public class School {
 
 	public static void subjectInput(Connection conn, Scanner sc) throws Exception {
 
-		sql = "select * from student st,subject sb where st.snum = sb.snum and sb.savg=0 order by st.snum";
+		sql = "select * "
+				+ "from student st,subject sb "
+				+ "where st.snum = sb.snum and sb.savg=0 "
+				+ "order by st.snum";
 		PreparedStatement ps1 = conn.prepareStatement(sql);
 		ResultSet rs = ps1.executeQuery();
 		System.out.println();
