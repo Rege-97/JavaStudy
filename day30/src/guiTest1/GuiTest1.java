@@ -8,38 +8,38 @@ public class GuiTest1 {
 
 	public static void main(String[] agrs) {
 
-		/// Frame(String title) : µµÈ­Áö
-		Frame f = new Frame("³ªÀÇ Ã¹ GUI"); // frame °´Ã¼
+		/// Frame(String title) : ï¿½ï¿½È­ï¿½ï¿½
+		Frame f = new Frame("ï¿½ï¿½ï¿½ï¿½ Ã¹ GUI"); // frame ï¿½ï¿½Ã¼
 
-		// 1) »çÀÌÁîÁöÁ¤
+		// 1) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		f.setSize(300, 300);
 
 		f.setVisible(true);
 
-		// 2) Áß¾Ó¿¡¼­ Ãâ·Â
+		// 2) ï¿½ß¾Ó¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 		f.setLocation(1000, 500);
 
-		// 2-1) Toolkit »ç¿ë (Ãâ·Â)
+		// 2-1) Toolkit ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½)
 		Dimension dim = (Toolkit.getDefaultToolkit()).getScreenSize();
 //      int x = (int)dim.getWidth();
 //      int y = (int)dim.getHeight();
 
-		// Áß¾ÓÃâ·Â
+		// ï¿½ß¾ï¿½ï¿½ï¿½ï¿½
 		int x = (int) dim.getWidth() / 2 - 150;
 		int y = (int) dim.getHeight() / 2 - 150;
-		// /2¸¸ÇÏ¸é È­¸é ²ÀÁöÁ¡¿¡¼­ Áß¾ÓÃâ·ÂµÊ, -150¸¸Å­ »©¸é È­¸é °¡¿îµ¥ Ãâ·Â
+		// /2ï¿½ï¿½ï¿½Ï¸ï¿½ È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß¾ï¿½ï¿½ï¿½Âµï¿½, -150ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ ï¿½ï¿½ï¿½îµ¥ ï¿½ï¿½ï¿½
 		f.setLocation(x, y);
-		System.out.println("x=" + x + "/y=" + y); // È­¸éÀÌ Ãâ·ÂµÇ´Â ¸ð´ÏÅÍ ÇØ»óµµ Å©±â
+		System.out.println("x=" + x + "/y=" + y); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ÂµÇ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø»ï¿½ Å©ï¿½ï¿½
 
 		/////////////////////////////////////////////////
 
-		// 1) ¹èÄ¡ : FlowLayout (int aligr, int hgap(°£°Ý), int vhap(°£°Ý)
+		// 1) ï¿½ï¿½Ä¡ : FlowLayout (int aligr, int hgap(ï¿½ï¿½ï¿½ï¿½), int vhap(ï¿½ï¿½ï¿½ï¿½)
 
 //      FlowLayout fl = new FlowLayout(FlowLayout.LEFT,20,20);
 //      f.setLayout(fl);
 
-		  //¸í¼¼ ¿ªÇÒ ÇÏ´Â ¾ê°¡ ¹èÄ¡°ü¸®ÀÚ Å¬·¡½º
-	     //ÇØ´ç ¹èÄ¡ÀÇ ±âÁØÀÌ left³Ä rigt³Ä¿¡ µû¶ó¼­ ÁöÁ¤µÊ
+		  //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ê°¡ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
+	     //ï¿½Ø´ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ leftï¿½ï¿½ rigtï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dsd
 	      FlowLayout f1=new FlowLayout(FlowLayout.RIGHT, 35, 35);
 	      f.setLayout(f1); 
 
@@ -56,9 +56,9 @@ public class GuiTest1 {
 		f.add(bt1, BorderLayout.EAST);
 		f.add(bt2, BorderLayout.NORTH);
 		f.add(bt3, "Center");
-		f.add(bt4, "West"); // ""ÀÎµ¥µµ ´ë¹®ÀÚ Æ²¸®¸é ¿À·ù³²
+		f.add(bt4, "West"); // ""ï¿½Îµï¿½ï¿½ï¿½ ï¿½ë¹®ï¿½ï¿½ Æ²ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		f.add(bt5, "South");
-		// ¸¶Áö¸·¿¡ bt5¸¸ ºÎÅ¹µÈ °ÍÃ³·³ º¸ÀÌ´Âµ¥ 5°³ ¸ðµÎ ºÎÂøµÈ °Í
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ bt5ï¿½ï¿½ ï¿½ï¿½Å¹ï¿½ï¿½ ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´Âµï¿½ 5ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 		/////////////////////////////////////////////////
 		f.setVisible(true);
