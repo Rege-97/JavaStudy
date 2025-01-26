@@ -57,7 +57,7 @@ public class GuiTest2 extends Frame {
 	//도화지 먼저 만듦
 		
 		GuiTest2 gt2=new GuiTest2();
-		gt2.setSize(300,300); //프레임 상속받은 거 확인가능함
+		gt2.setSize(300,300); //프레임 상속받은 거 확인 가능함
 		gt2.setVisible(true);
 		
 
