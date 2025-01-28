@@ -3,18 +3,18 @@ package guiTest1;
 import java.awt.*;
 
 public class GuiTest3 extends Frame {
-//ÇÁ·¹ÀÓÀÇ ¸ðµç °ÍÀ» »ó¼Ó¹Þ°Ô µÊ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ó¹Þ°ï¿½ ï¿½ï¿½
 
 	public GuiTest3() {
-		super("½Ç½À1");
+		super("ï¿½Ç½ï¿½1");
 
-		// ±âº»·¹ÀÌ¾Æ¿ôÀ» º¸´õ·¹ÀÌ¾Æ¿ôÀ¸·Î ¼³Á¤
-		// ÄÄÆÛ³ÍÆ® °£°ÝÀ» 10.10¾¿ ÁÜ
+		// ï¿½âº»ï¿½ï¿½ï¿½Ì¾Æ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¾Æ¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		// ï¿½ï¿½ï¿½Û³ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 10.10ï¿½ï¿½ ï¿½ï¿½
 
-		BorderLayout b1 = new BorderLayout(10, 10); //ÁÂ¿ì°£°Ý 10. »óÇÏ°£°Ý 10
+		BorderLayout b1 = new BorderLayout(10, 10); //ï¿½Â¿ì°£ï¿½ï¿½ 10. ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ 10
 		this.setLayout(b1);
 
-		// Áß´Ü
+		// ï¿½ß´ï¿½
 
 		Panel p_center = new Panel();
 		GridLayout g1 = new GridLayout(2, 2, 10, 10);
@@ -30,13 +30,13 @@ public class GuiTest3 extends Frame {
 		p_center.add(bt3);
 		p_center.add(bt4);
 
-		// add(bt1,2,3,4)¸¦ ¾È¹Ù²Ù¸é µ¤¾î¾º¿öÁü !!
+		// add(bt1,2,3,4)ï¿½ï¿½ ï¿½È¹Ù²Ù¸ï¿½ ï¿½ï¿½ï¿½î¾ºï¿½ï¿½ï¿½ï¿½ !!
 
 		this.add(p_center, "Center");
 		p_center.setBackground(Color.pink);
 
-		// °á°ú ÀûÀ¸·Î ¸¸µç ¹Ù±¸´Ï¸¦ ÇÁ·¹ÀÓ¿¡ ³Ö¾îÁÜ -> THIS.ADD(P_CENTER)
-		// ÇÏ´Ü
+		// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù±ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ ï¿½Ö¾ï¿½ ï¿½ï¿½ -> THIS.ADD(P_CENTER)
+		// ï¿½Ï´ï¿½
 		Panel p_south = new Panel();
 		BorderLayout b12 = new BorderLayout(10, 10);
 		p_south.setLayout(b12);
@@ -53,19 +53,19 @@ public class GuiTest3 extends Frame {
 	public Insets getInsets() {
 		Insets i = new Insets(20, 20, 20, 20);
 		return i;
-		// getInsetÇÏ°í ¿£ÅÍ
+		// getInsetï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 	}
 
 	public static void main(String[] args) {
 
 		GuiTest3 gt3 = new GuiTest3();
-		gt3.setSize(300, 300); // gt3¤¿ °¡Áö°í ÀÖ´Â setvisibleÀ» ÅëÇØ
-		gt3.setVisible(true); // ´«¿¡ º¸ÀÌµµ·ÏÇÔ
-		// °´Ã¼ ¸¸µé¸é¼­ È­¸é ±¸¼ºÇØµµ ÁÁÀ» °Í °°±äÇÔ
+		gt3.setSize(300, 300); // gt3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ setvisibleï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		gt3.setVisible(true); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµ ï¿½ï¿½ï¿½ï¿½ï¿½
+		// ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½é¼­ È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-		// ±×·¡¼­ »ý¼ºÀÚ È£ÃâÇØ °´Ã¼ ¸¸µç´Ï±î
-		// gui ¸ä¼Òµå »ý¼º?
+		// ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
+		// gui ï¿½ï¿½Òµï¿½ ï¿½ï¿½ï¿½ï¿½?
 	}
 
 }
