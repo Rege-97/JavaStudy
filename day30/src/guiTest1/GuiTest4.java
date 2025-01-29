@@ -4,68 +4,64 @@ import java.awt.*;
 
 public class GuiTest4 extends Frame {
 
-	public GuiTest4() { //º¸´õ°¡ ±âº»
-		
-		super("½Ç½À2");
-	
-		
-		//»ó´Ü
-		Panel p_north=new Panel(); //±âº»°ªÀÌ ÇÁ·Î·¹ÀÌ¾Æ¿ô
-		GridLayout gl = new GridLayout(2,2,10,10); //(ÇöÀç´Â)±×·¡ÀÌ ·¹ÀÌ¾Æ¿ôÀº ÁÖ¹®Ç¥
-		p_north.setLayout(gl); //±×·¹ÀÌ ·¹ÀÌ¾Æ¿ô µî·ÏµÈ »óÅÂ !!
-		
-		Label lb_from=new Label("º¸³»´Â ÀÌ");//from º¸³»´ÂÀÌ //lA
-		Label lb_to=new Label("¹Ş´Â ÀÌ");
-		TextField tf_from=new TextField(); //°´Ã¼ »ı¼ºÇÔ
-		TextField tf_to=new TextField();
+	public GuiTest4() { // ë³´ë”ê°€ ê¸°ë³¸
+
+		super("ì‹¤ìŠµ2");
+
+		// ìƒë‹¨
+		Panel p_north = new Panel(); // ê¸°ë³¸ê°’ì´ í”„ë¡œë ˆì´ì•„ì›ƒ
+		GridLayout gl = new GridLayout(2, 2, 10, 10); // (í˜„ì¬ëŠ”)ê·¸ë˜ì´ ë ˆì´ì•„ì›ƒì€ ì£¼ë¬¸í‘œ
+		p_north.setLayout(gl); // ê·¸ë ˆì´ ë ˆì´ì•„ì›ƒ ë“±ë¡ëœ ìƒíƒœ !!
+
+		Label lb_from = new Label("ë³´ë‚´ëŠ” ì´");// from ë³´ë‚´ëŠ”ì´ //lA
+		Label lb_to = new Label("ë°›ëŠ” ì´");
+		TextField tf_from = new TextField(); // ê°ì²´ ìƒì„±í•¨
+		TextField tf_to = new TextField();
 		p_north.add(lb_from);
-		p_north.add(tf_from); //ºÎÂø Á¦ÀÏ Å« º£ÀÌ½º¿¡¼­ »ó´Ü¿¡ ºÎÂøÇÏÀÚ
+		p_north.add(tf_from); // ë¶€ì°© ì œì¼ í° ë² ì´ìŠ¤ì—ì„œ ìƒë‹¨ì— ë¶€ì°©í•˜ì
 		p_north.add(lb_to);
 		p_north.add(tf_to);
-		
-		this.add(p_north,BorderLayout.NORTH);
-		
-		//Áß´Ü
-		Panel p_center=new Panel(new BorderLayout(5,5));
-		Label lb_msg=new Label("¾Æ·¡¿¡ ¸Ş¼¼Áö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.",Label.CENTER);  //ÀÌ°É °¡¿îµ¥·Î ÁöÁ¤ÇÏ±â À§ÇØ¼­´Â 
-		//¹Ù¶óº§ alignment À§Ä¡¸¦ ÁöÁ¤ÇÒ ¶§ »ç¿ëÇÏ´Â ¾ê ¾î´À À§Ä¡·Î ¹®ÀÚ¿­ Ãâ·ÂÇÒÁö
-		//¿£ÅÍÄ¡°í »ó¼Ó ¹¹ÀÖ´ÂÁö º¸¸é ÀÌ°Å ¶ä
-		
-		Label lb_title=new Label("¸Ş¼¼Áö");
-		TextArea ta_content=new TextArea();
-		p_center.add(lb_msg,"North");
-		p_center.add(lb_title,"West");
-		p_center.add(ta_content,"Center");
-		
-		
-		
-		Panel p_center_south=new Panel();
-		Button bt_send=new Button("º¸³»±â");
-		Button bt_cancel=new Button("Ãë¼Ò");
+
+		this.add(p_north, BorderLayout.NORTH);
+
+		// ì¤‘ë‹¨
+		Panel p_center = new Panel(new BorderLayout(5, 5));
+		Label lb_msg = new Label("ì•„ë˜ì— ë©”ì„¸ì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš”.", Label.CENTER); // ì´ê±¸ ê°€ìš´ë°ë¡œ ì§€ì •í•˜ê¸° ìœ„í•´ì„œëŠ”
+		// ë°”ë¼ë²¨ alignment ìœ„ì¹˜ë¥¼ ì§€ì •í•  ë•Œ ì‚¬ìš©í•˜ëŠ” ì–˜ ì–´ëŠ ìœ„ì¹˜ë¡œ ë¬¸ìì—´ ì¶œë ¥í• ì§€
+		// ì—”í„°ì¹˜ê³  ìƒì† ë­ìˆëŠ”ì§€ ë³´ë©´ ì´ê±° ëœ¸
+
+		Label lb_title = new Label("ë©”ì„¸ì§€");
+		TextArea ta_content = new TextArea();
+		p_center.add(lb_msg, "North");
+		p_center.add(lb_title, "West");
+		p_center.add(ta_content, "Center");
+
+		Panel p_center_south = new Panel();
+		Button bt_send = new Button("ë³´ë‚´ê¸°");
+		Button bt_cancel = new Button("ì·¨ì†Œ");
 		p_center_south.add(bt_send);
 		p_center_south.add(bt_cancel);
-		p_center.add(p_center_south,"South");
-		
-		
-		//Panel p_north=new Panel(); ÀÇ ÇÏ´Ü¿¡
-		this.add(p_center,"Center");
-		
+		p_center.add(p_center_south, "South");
+
+		// Panel p_north=new Panel(); ì˜ í•˜ë‹¨ì—
+		this.add(p_center, "Center");
+
 	}
 
 	@Override
 	public Insets getInsets() {
-		Insets i = new Insets(45, 20, 20, 20); //ÀÎ¼½Æ®°´Ã¼ ÁöÁ¤
-		return i; //ÀçÁ¤ÀÇÇÑ ÀÎ¼ÁÆ® µ¹·ÁÁÙ ¼ö ÀÖµµ·Ï
+		Insets i = new Insets(45, 20, 20, 20); // ì¸ì„¹íŠ¸ê°ì²´ ì§€ì •
+		return i; // ì¬ì •ì˜í•œ ì¸ì…‰íŠ¸ ëŒë ¤ì¤„ ìˆ˜ ìˆë„ë¡
 
 	}
 
 	public static void main(String[] args) {
 
 		GuiTest4 gt4 = new GuiTest4();
-		gt4.setSize(450, 300); // gt3¤¿ °¡Áö°í ÀÖ´Â setvisibleÀ» Åë
+		gt4.setSize(450, 300); // gt3ã… ê°€ì§€ê³  ìˆëŠ” setvisibleì„ í†µ
 		gt4.setVisible(true);
-//¹èÄ¡´Â »ó´ë¹èÄ¡¶ó¼­ 450À¸·Î º¯°æÇØµµ µÊ
-		
+		// ë°°ì¹˜ëŠ” ìƒëŒ€ë°°ì¹˜ë¼ì„œ 450ìœ¼ë¡œ ë³€ê²½í•´ë„ ë¨
+
 	}
 
 }

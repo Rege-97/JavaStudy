@@ -3,18 +3,18 @@ package guiTest1;
 import java.awt.*;
 
 public class GuiTest3 extends Frame {
-//�������� ��� ���� ��ӹް� ��
+//프레임의 모든 것을 상속받게 됨
 
 	public GuiTest3() {
-		super("�ǽ�1");
+		super("실습1");
 
-		// �⺻���̾ƿ��� �������̾ƿ����� ����
-		// ���۳�Ʈ ������ 10.10�� ��
+		// 기본레이아웃을 보더레이아웃으로 설정
+		// 컴퍼넌트 간격을 10.10씩 줌
 
-		BorderLayout b1 = new BorderLayout(10, 10); //�¿찣�� 10. ���ϰ��� 10
+		BorderLayout b1 = new BorderLayout(10, 10); // 좌우간격 10. 상하간격 10
 		this.setLayout(b1);
 
-		// �ߴ�
+		// 중단
 
 		Panel p_center = new Panel();
 		GridLayout g1 = new GridLayout(2, 2, 10, 10);
@@ -30,13 +30,13 @@ public class GuiTest3 extends Frame {
 		p_center.add(bt3);
 		p_center.add(bt4);
 
-		// add(bt1,2,3,4)�� �ȹٲٸ� ������� !!
+		// add(bt1,2,3,4)를 안바꾸면 덮어씌워짐 !!
 
 		this.add(p_center, "Center");
 		p_center.setBackground(Color.pink);
 
-		// ��� ������ ���� �ٱ��ϸ� �����ӿ� �־� �� -> THIS.ADD(P_CENTER)
-		// �ϴ�
+		// 결과 적으로 만든 바구니를 프레임에 넣어줌 -> THIS.ADD(P_CENTER)
+		// 하단
 		Panel p_south = new Panel();
 		BorderLayout b12 = new BorderLayout(10, 10);
 		p_south.setLayout(b12);
@@ -53,19 +53,19 @@ public class GuiTest3 extends Frame {
 	public Insets getInsets() {
 		Insets i = new Insets(20, 20, 20, 20);
 		return i;
-		// getInset�ϰ� ����
+		// getInset하고 엔터
 
 	}
 
 	public static void main(String[] args) {
 
 		GuiTest3 gt3 = new GuiTest3();
-		gt3.setSize(300, 300); // gt3�� ������ �ִ� setvisible�� ����
-		gt3.setVisible(true); // ���� ���̵ �����
-		// ��ü ����鼭 ȭ�� �����ص� ���� �� ������
+		gt3.setSize(300, 300); // gt3ㅏ 가지고 있는 setvisible을 통해
+		gt3.setVisible(true); // 눈에 보이도록함
+		// 객체 만들면서 화면 구성해도 좋을 것 같긴함
 
-		// �׷��� ������ ȣ���� ��ü ����ϱ�
-		// gui ��ҵ� ����?
+		// 그래서 생성자 호출해 객체 만든니까
+		// gui 멧소드 생성?
 	}
 
 }
